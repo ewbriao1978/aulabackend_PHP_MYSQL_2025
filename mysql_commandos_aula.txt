@@ -1,0 +1,131 @@
+_HiStOrY_V2_
+exit
+show databases;
+quit
+show databases
+/
+;
+show databases /;
+show databases;
+use AutoBD/
+use AutoBD;
+describe AutoBD;
+show tables;
+descrive automoveis;
+describe automoveis;
+select * from automoveis;
+exit
+use mysql;
+select user from user;
+quit
+create database MeuDB;
+show databases;
+use MeuDB;
+show tables;
+describe postagens;
+drop table postagens;
+show tables;
+quit
+show databasesç
+ç
+;
+show databasesç ç;
+show databases;
+use mydbprisma
+show tables;
+select * from Funcionario;
+select * from _prisma_migrations;
+quit
+exit
+create database a1;
+show databases;
+quit
+show 
+databases;
+show  databases;
+create database aulabackend;
+show  databases;0
+;
+clear
+cls
+show  databases;
+use aulabackend;
+create table clientes (
+id int primary key auto_increment,
+nome varchar(100),
+cidade varchar(100),
+idade int
+);
+create table clientes ( id int primary key auto_increment, nome varchar(100), cidade varchar(100), idade int );
+show tables;
+describe clientes;
+select * from clientes;
+insert into clientes(nome, cidade, idade) values ('Eduardo','Rio Grande',21);
+select * from clientes;
+describe clientes;
+insert into clientes(nome, cidade, idade) values ('Messi','Rosario',35);
+insert into clientes(nome, cidade, idade) values ('Romario','Rio de Janeiro',63);
+insert into clientes(nome, cidade, idade) values ('Paolo Maldini','Roma',63);
+select * from clientes;
+delete from clientes where id=1;
+select * from clientes;
+delete from clientes where id=1;
+select * from clientes;
+insert into clientes(nome, cidade, idade) values ('Van Basten','Utrech',61);
+select * from clientes;
+update clientes set nome='Lionel Messi' where id=2;
+select * from clientes;
+select * from clientes where idade <60;
+show tables;
+create table pedidos(
+id int primary key auto_increment,
+cliente_id int,
+valor double,
+data_pedido date,
+foreign key (cliente_id) references clientes(id));
+create table pedidos( id int primary key auto_increment, cliente_id int, valor double, data_pedido date, foreign key (cliente_id) references clientes(id));
+show tables;
+describe pedidos;
+select * from clientes;
+insert into pedidos (cliente_id, valor, data_pedido) values (2,100,2025-03-19); 
+insert into pedidos (cliente_id, valor, data_pedido) values (2,100,'2025-03-19');
+select * from pedidos;
+insert into pedidos (cliente_id, valor, data_pedido) values (3,200,'2025-03-02');
+insert into pedidos (cliente_id, valor, data_pedido) values (2,600,'2025-03-02');
+insert into pedidos (cliente_id, valor, data_pedido) values (2,700,'2024-12-02');
+select * from pedidos;
+select * from clientes;
+insert into pedidos (cliente_id, valor, data_pedido) values (4,1700,'2024-12-22');
+insert into pedidos (cliente_id, valor, data_pedido) values (4,200.3,'2024-12-25');
+insert into pedidos (cliente_id, valor, data_pedido) values (5,90,'2023-12-25');
+select * from pedidos;
+select * from clientes;
+select * from clientes order by idade desc;
+select * from clientes order by idade asc;
+select * from pedidos;
+select * from pedidos order by data_pedido asc;
+select * from pedidos order by data_pedido desc;
+select * from clientes;
+select * from clientes like 'Lio%';
+select * from clientes where nome like 'Lio%';
+select * from clientes where nome like '%ini';
+select * from clientes where nome like '%ald%';
+select * from clientes;
+select * from pedidos;
+select clientes.nome, pedidos.valor, pedidos.data_pedido from clientes join pedidos on clientes.id = pedidos.cliente_id;
+select clientes.nome,clientes.cidade, pedidos.valor, pedidos.data_pedido from clientes join pedidos on clientes.id = pedidos.cliente_id;
+clear
+select cliente_id from pedidos where valor > 200;
+select nome from clientes where id (select cliente_id from pedidos where valor > 200);
+select nome from clientes where id in (select cliente_id from pedidos where valor > 200);
+select cidade, COUNT(*) as total_clientes from clientes group by cidade;
+insert into clientes(nome, cidade, idade) values ('Ronaldo Nazário','Rio de Janeiro',47);
+select * from clientes;
+select cidade, COUNT(*) as total_clientes from clientes group by cidade;
+clear
+select * from clientes join pedidos on clientes.id = pedidos.cliente_id;
+select cidade, COUNT(*) as total_clientes from clientes group by cidade;
+select * from clientes join pedidos on clientes.id = pedidos.cliente_id;
+select * from clientes join pedidos on clientes.id = pedidos.cliente_id where clientes.nome like %Messi%;
+select * from clientes join pedidos on clientes.id = pedidos.cliente_id where clientes.nome like '%Messi%';
+quit
