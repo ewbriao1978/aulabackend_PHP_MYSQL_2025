@@ -12,7 +12,8 @@ $resultado = mysqli_query($conexao,$query);
 	<td><b>Nome</b></td>
 	<td><b>Cidade</b></td>
     <td><b>Idade</b></td>
-    <td><b> # </b><td>
+    <td><b> # </b></td>
+    <td><b> # </b></td>
 </tr>
 
 <?php
@@ -26,6 +27,20 @@ while($linha = mysqli_fetch_array($resultado)){
             <button type='submit'> Remover </button>
         </form>
     </td>
+
+
+
+    <td>
+        <form action='editar.php' method='POST'>
+            <input type='hidden' name='id_para_editar' value=".$linha['id'].">
+            <button type='submit'> Editar </button>
+        </form>
+    </td>
+
+
+
+
+
 
     </tr>
     
