@@ -1,7 +1,7 @@
 <?php
 $conexao = mysqli_connect("localhost","root","","aulabackend") or print (mysqli_error());
 
-$query = "SELECT nome,cidade,idade FROM clientes ORDER BY nome ASC ";
+$query = "SELECT id, nome,cidade,idade FROM clientes ORDER BY nome ASC ";
 
 $resultado = mysqli_query($conexao,$query);
 ?>
@@ -21,7 +21,8 @@ $resultado = mysqli_query($conexao,$query);
 while($linha = mysqli_fetch_array($resultado)){
     echo "<tr><td>".$linha['nome']."</td><td>".$linha['cidade']."</td><td>".$linha['idade']."</td>
     <td>
-        <form action='bd.php' method='POST'>
+        <form action='remover.php' method='POST'>
+            <input type='hidden' name='id_para_remover' value=".$linha['id'].">
             <button type='submit'> Remover </button>
         </form>
     </td>
