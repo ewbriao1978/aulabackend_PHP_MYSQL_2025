@@ -53,7 +53,7 @@ use aulabackend;
 create table clientes (
 id int primary key auto_increment,
 nome varchar(100),
-cidade varchar(100),
+cidade varchar(100), 
 idade int
 );
 create table clientes ( id int primary key auto_increment, nome varchar(100), cidade varchar(100), idade int );
