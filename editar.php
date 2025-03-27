@@ -25,6 +25,8 @@
         <label> Idade: </label><br>
         <input type="number" name="idade" value=<?=$linha['idade']?> required><br> 
 
+        <input type="hidden" name="id_para_atualizacao_form" value=<?=$linha['id']?>>
+
         <button type="submit"> Atualizar! </button>
     </form>
 
